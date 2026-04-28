@@ -10,6 +10,7 @@ body {
     aspect-ratio: 1 / 1;
     margin: 1em auto;
     margin-bottom: 1px; /* Place Footer Correctly */
+    margin-top: 10px;
 }
 
 .tile {
@@ -203,13 +204,29 @@ body {
 .copyright{
     margin-top: 0px;
     text-align: right;
+    padding-bottom:5px;
 }
 
 .buttons{
     height: 33px;
     background-color: green;    
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
+@keyframes scroll {
+  0% {
+    transform:translateX(0)
+  }
+  100% {
+    transform:translateX(-50%)
+  }
+}
+
+.right {
+    width:max-content;
+    animation:scroll 30s linear infinite;
+}
 
 
 
