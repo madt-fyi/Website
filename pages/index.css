@@ -5,11 +5,11 @@ body {
 #tiles {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 1fr;
     gap: 10px;
-    width: min(90%, 750px);
+    width: min(90%, 755px);
     aspect-ratio: 1 / 1;
     margin: 1em auto;
+    margin-bottom: 1px; /* Place Footer Correctly */
 }
 
 .tile {
@@ -83,18 +83,6 @@ body {
   box-sizing: border-box;
   border: 1px solid black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ================================== */
 /* Animation für Kachel 8             */
@@ -203,3 +191,25 @@ body {
     opacity: 1;
     pointer-events: auto;
 }
+
+/* ================================== */
+/* Footers                            */
+/* ================================== */
+.footer {
+    width: min(90%, 755px);
+    margin: 0 auto;
+}
+
+.copyright{
+    margin-top: 0px;
+    text-align: right;
+}
+
+.buttons{
+    height: 33px;
+    background-color: green;    
+}
+
+
+
+
