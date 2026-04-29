@@ -196,37 +196,54 @@ body {
 /* ================================== */
 /* Footers                            */
 /* ================================== */
+
+@keyframes scroll {
+  0% {
+    transform:translateX(0)
+  
+  }
+  100% {
+    transform:translateX(-100%)
+  
+  }
+}
+
 .footer {
     width: min(90%, 755px);
     margin: 0 auto;
+}
+
+
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  padding: 2px;
+
+    
 }
 
 .copyright{
     margin-top: 0px;
     text-align: right;
     padding-bottom:5px;
+    
 }
 
 .buttons{
-    height: 33px;
+    height: 34px;
     background-color: green;    
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 
-@keyframes scroll {
-  0% {
-    transform:translateX(0)
-  }
-  100% {
-    transform:translateX(-50%)
-  }
-}
 
 .right {
-    width:max-content;
-    animation:scroll 30s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll 15s linear infinite;
+    
 }
-
 
 
