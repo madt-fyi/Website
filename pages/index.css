@@ -258,3 +258,77 @@ body {
 }
 
 
+/**/
+/* <- */
+@keyframes marquee-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-right {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.newfooter {
+    width: 755px;
+    height: 33px;
+    margin: 5px auto;
+    padding: 2px;
+    background: green;
+    overflow: hidden;
+}
+
+.newticker {
+    width: 100%;
+    height: 33px;
+    overflow: hidden;
+}
+
+.newright {
+    display: flex;
+    width: max-content;
+    height: 31px;
+    animation: marquee-left 15s linear infinite;
+    padding: 1px;
+}
+
+.newleft {
+    display: flex;
+    width: max-content;
+    height: 31px;
+    animation: marquee-right 15s linear infinite;
+    padding: 1px;
+}
+
+.newticker-set {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.newticker-set a {
+    display: block;
+    width: 88px;
+    height: 31px;
+    flex-shrink: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+
+}
+
+.newticker-set img {
+    display: block;
+    width: 88px;
+    height: 31px;
+    
+}
