@@ -1,0 +1,174 @@
+/* This is a comment */
+body {
+    background-color: brown;
+}
+
+#tiles {
+    background-color: gold;
+    display: grid;
+    
+    /* 7 Reihen, je 100px groß */
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+    /* 7 * 100px = 700px
+       6 *  10px =  70px 
+       (Größe der Blöcke + Größe der Abstände zwischen den Blöcken)
+    */
+    width: 760px;
+    
+    /* Abstand zwischen den Blöcken 10px */
+    gap: 10px;
+    
+    /* Abstand Ränder */
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 1 / 1;
+}
+
+/*==========================*/
+/* Blöcke                   */
+/*==========================*/
+.block {
+    background-color: gray;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tile1x1 {   
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: aliceblue;
+}
+
+.tile3x2{
+    grid-column: span 3;
+    grid-row: span 2;
+    background-color: blue;
+}
+
+.tile4x1 {
+    grid-column: span 4;
+    grid-row: span 1;
+    background-color: antiquewhite;
+}
+
+.tile2x2 {  
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: aqua;
+}
+
+.tile4x7 {  
+    grid-column: span 4;
+    grid-row: span 7;
+    background-color: aquamarine;
+}
+
+.navigation{
+      display: flex;
+  flex-direction: column;
+  height: 100%;
+    pre {
+        font-size: 6px;
+    }
+}
+
+.quick-links {
+  display: flex;
+  width: 100%;
+  margin-top: auto; /* pushes it to the bottom */
+}
+
+.subtile {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.hallo{
+    grid-row: span 1;
+    grid-column: span 4;
+    flex-direction: column;
+    font-size: 10px;
+    pre{
+        margin: 0px;
+        margin-top: 0px;
+    }
+    span{
+        font-size: 11.5px
+    }
+}
+
+/*==========================*/
+/* Footer                   */
+/*==========================*/
+
+
+footer {
+    background-color: green;
+    width: min(90%, 760px);
+    margin: 10px auto;
+}
+
+/* ================================== */
+/* Hover Effekt                       */
+/* ================================== */
+/* hover-blur der Klasse hinzufügen zum Nutzen */
+.hover-blur img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+
+}
+
+.hover-blur .hide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    max-width: 95%;
+    word-wrap: break-word;
+    z-index: 1;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.hover-blur:hover img {
+    filter: blur(4px);
+}
+
+.hover-blur:hover .hide {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.short img{
+    display: block;
+    width: 85%;
+    height: 85%;
+    margin: 0 auto;
+}
+
+
+.short:hover img {
+    width: 90%;
+    height: 90%;
+    filter: blur(1px);
+}
