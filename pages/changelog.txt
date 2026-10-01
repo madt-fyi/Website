@@ -1,9 +1,12 @@
 2026-10-01
+    - Neue HTML Templates erstellt um
+        einfacher neue Subpages zu 
+        erstellen
     - 
 ---------------------------------------
 2026-09-29
-    - Added Changelog
-    - Working on About
+    - Changelog hinzugefügt
+    - Arbeiten an der About Seite
 --------------------------------------
 2026-09-22
     - Harddisk Fail
